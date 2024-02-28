@@ -1,6 +1,7 @@
-dash==2.15.0
-dash_bootstrap_components==1.5.0
-dash_iconify==0.1.2
+dash==2.11.1
+dash_bootstrap_components==1.4.1
 dash_mantine_components==0.12.0
+whitenoise==6.6.0
 gunicorn
-whitenoise
+pandas
+dash-tools
