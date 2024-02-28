@@ -9,8 +9,8 @@ app = dash.Dash(__name__, use_pages=True,
                 external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP],
                 meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}],
                 suppress_callback_exceptions=True)
-server = app.server
-server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
+# server = app.server
+# server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
 
 
 app.layout = html.Div([
@@ -20,6 +20,11 @@ app.layout = html.Div([
             brand_href="/",
             color="dark",
             dark=True,
+            children=[
+                dbc.NavItem(dbc.NavLink("GitHub", href="https://github.com/LucaPoli59", external_link=True)),
+                dbc.NavItem(dbc.NavLink("GitLab", href="https://gitlab.com/Luca599", external_link=True)),
+                dbc.NavItem(dbc.NavLink("LinkedIn", href="https://www.linkedin.com/in/luca-poli-cs", external_link=True)),
+            ],
         )
     ]),
 
