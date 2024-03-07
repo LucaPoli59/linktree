@@ -29,7 +29,11 @@ app.layout = html.Div(children=[
 
     html.Div(dash.page_container, style={"min-height": "calc(100vh - 60px - 56px)"}, className="pb-5"),
 
-    dmc.Footer("LinkTree",
+    dmc.Footer([
+        html.Div("Luca Poli", className="me-3"),
+        html.Div("+39 3455164670", className="me-3"),
+        html.Div("poli.luca.marconi@gmail.com")
+    ],
                height=60,
                fixed=False,
                style={"background-color": "#333333", "color": "white"},
