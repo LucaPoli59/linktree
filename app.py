@@ -1,8 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
-from dash import DiskcacheManager, html
-from whitenoise import WhiteNoise
+from dash import html
 
 app = dash.Dash(__name__, use_pages=True,
                 external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP],
@@ -13,24 +12,22 @@ app = dash.Dash(__name__, use_pages=True,
 
 
 app.layout = html.Div(children=[
-    html.Div(children=[
-        dbc.NavbarSimple(
-            brand="LinkTree",
-            brand_href="/",
-            color="dark",
-            dark=True,
-            children=[
-                dbc.NavItem(dbc.NavLink("GitHub", href="https://github.com/LucaPoli59",
-                                        external_link=True, target="_blank")),
-                dbc.NavItem(dbc.NavLink("GitLab", href="https://gitlab.com/Luca599",
-                                        external_link=True, target="_blank")),
-                dbc.NavItem(dbc.NavLink("LinkedIn", href="https://www.linkedin.com/in/luca-poli-cs",
-                                        external_link=True, target="_blank")),
-            ],
-        )
-    ]),
+    dbc.NavbarSimple(
+        brand="LinkTree",
+        brand_href="/",
+        color="dark",
+        dark=True,
+        children=[
+            dbc.NavItem(dbc.NavLink("GitHub", href="https://github.com/LucaPoli59",
+                                    external_link=True, target="_blank")),
+            dbc.NavItem(dbc.NavLink("GitLab", href="https://gitlab.com/Luca599",
+                                    external_link=True, target="_blank")),
+            dbc.NavItem(dbc.NavLink("LinkedIn", href="https://www.linkedin.com/in/luca-poli-cs",
+                                    external_link=True, target="_blank")),
+        ],
+    ),
 
-    dash.page_container,
+    html.Div(dash.page_container, style={"min-height": "calc(100vh - 60px - 56px)"}, className="pb-5"),
 
     dmc.Footer("LinkTree",
                height=60,

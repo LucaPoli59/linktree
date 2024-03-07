@@ -1,7 +1,6 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
-import os
 from dash import html, dcc, callback, Input, Output, State
 
 from general_data import projects_dict
@@ -25,7 +24,7 @@ def layout(work_id):
         collaborators_component = None
 
     general_info_component = html.Div([
-        html.Center(html.H1("Project: " + project["name"], className="display-3 mt-5")),
+        html.Center(html.P("Project: " + project["name"], className="display-5 pt-5")),
         html.Br(),
         html.P(project["short_desc"], className="lead"),
         dbc.Row([
