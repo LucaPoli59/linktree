@@ -28,7 +28,7 @@ app.layout = html.Div(children=[
         ],
     ),
 
-    html.Div(dash.page_container, style={"min-height": "calc(100vh - 60px - 56px)"}, className="pb-5"),
+    html.Div(dash.page_container, style={"min-height": "calc(100vh - 60px - 56px)"}, className="pb-3"),
 
     dmc.Footer([
         html.Div("Luca Poli", className="me-3"),
